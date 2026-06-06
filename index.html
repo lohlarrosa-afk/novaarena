@@ -524,7 +524,7 @@
     resize();
     addEventListener('resize', resize);
 
-    const N = Math.max(3, Math.min(7, Math.round(innerWidth / 320)));
+    const N = 1;
     const balls = [];
     for(let i = 0; i < N; i++){
       const r = (Math.random() * 8 + 9) * DPR;
@@ -595,7 +595,7 @@
           }
         }
       }
-      ctx.globalAlpha = 0.6;
+      ctx.globalAlpha = 0.22;
       for(const b of balls) draw(b);
       ctx.globalAlpha = 1;
       requestAnimationFrame(tick);
